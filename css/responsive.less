@@ -1,0 +1,118 @@
+﻿/*!
+ * Polycademy Responsive CSS
+ */
+
+/* Large desktop */
+/* @media (min-width: 1200px) {} */
+
+/* Portrait tablet to landscape and desktop */
+/* @media (min-width: 768px) and (max-width: 979px) {} */
+
+/* Get the nav to stop floating right none once its been collapsed */
+@media (max-width: 970px) {
+	.nav {
+		float: none !important;
+	}
+	.white_text_container{
+		margin: 20px 6% !important;
+	}
+	#disqus_thread{
+		margin: 20px 8% !important;
+	}
+}
+
+/* (Cascading) to get the slogan to disappear */
+@media (max-width: 822px) {
+	.slogan{
+		display: none;
+		margin-right: 0 !important;
+	}
+	.navbar .btn-navbar{
+		margin: 46px 0 0 0 !important;
+	}
+}
+
+@media (max-width: 767px){
+	.logistics_grid{
+		.team_panel{
+			padding: 0 18%;
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px){
+
+	.row > section{
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+	.liquid-responsive .liquid-slider .panel .panel-wrapper{
+		padding: 20px 35px !important;
+	}
+	
+	.white_text_container{
+		margin: 20px 4% !important;
+	}
+	
+	#disqus_thread{
+		margin: 20px 6% !important;
+	}
+	
+	.blog_content, .preview_blog{
+		p{
+			font-size: 140% !important;
+			line-height: 150% !important;
+		}
+		img{
+			float: none !important;
+		}
+	}
+	
+}
+
+/* Landscape phones and down */
+@media (max-width: 512px) {
+
+	.clear_form_labels(){
+		.control-group{
+			.control-label {
+				padding-top: 0 !important;
+				width: auto !important;
+			}
+			.controls{
+				margin-left: 0 !important;
+			}
+		}
+	}
+
+	header .logo{
+		float: none !important;
+		margin: 35px auto 10px !important;
+		display: block !important;
+		img{
+			display: block !important;
+			margin: 0 auto !important;
+		}
+	}
+	header.navbar .btn-navbar {
+		margin: 10px auto !important;
+		float: none !important;
+		clear: both !important;
+	}
+	.course_application .course_application_form, .blog_create .blog_create_form{
+		.clear_form_labels();
+	}
+	
+	.white_text_container, #disqus_thread{
+		margin: 20px 2% !important;
+	}
+	
+	.blog_content, .preview_blog{
+		p, ul, ol{
+			font-size: 130% !important;
+			line-height: 140% !important;
+		}
+	}
+	
+}

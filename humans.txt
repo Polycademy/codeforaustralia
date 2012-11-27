@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Roger -- Founder of Polycademy & Code for Australia -- @CodeforAus
+
+# THANKS
+
+    Maria
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
