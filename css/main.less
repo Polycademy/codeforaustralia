@@ -35,17 +35,46 @@
    VARIABLES
    ========================================================================== */
 @container_padding: 1.2%;
+.border_radius(@radius){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
 
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+.article_heading{
+	font-family: 'benderregular';
+	padding: 40px 2%;
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+}
+
+.striped_container h1.article_heading{
+	color: #f4f8fe;
+	text-shadow: 0 1px 1px rgba(169, 178, 190, .9);
+}
+   
 /* ==========================================================================
    CONTAINERS
    ========================================================================== */
 body {
 	padding-top: 41px;
 	font-family: arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	color: #464a51;
 }
 
 .container{
 	padding: 0 @container_padding;
+}
+
+.striped_container{
+	border-top: 1px solid #dddbdb;
+	background: url('../img/striped_background.png');
 }
 
 /* ==========================================================================
@@ -78,6 +107,7 @@ header{
 
 .logo_container{
 	background: #e9e9e9;
+	border-bottom: 1px solid #e7e5e5;
 	.logo{
 		outline: 0;
 		img{
@@ -87,6 +117,46 @@ header{
 	}
 }
 
+/* ==========================================================================
+   MAIN ATTENTION SECTIONS
+   ========================================================================== */
+.main_attention{
+	.section_container{
+		float: none;
+		margin: 50px auto;
+		display: table;
+		section{
+			background: url('../img/section_panel_bg.png');
+			.border_radius(10px);
+			border: 1px solid #dddbdb;
+			padding: 2%;
+			display: table;
+			div{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			img{
+				margin: 0 auto;
+				padding: 30px 40px;
+				display: block;
+			}
+			p{
+				font-size: 190%;
+				line-height: 140%;
+				width: 74%;
+				padding: 20px;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+	.first{
+		margin-top: 0;
+	}
+	.last{
+		margin-bottom: 0;
+	}
+}
 
 /* ==========================================================================
    RESPONSIVE
@@ -116,6 +186,27 @@ header{
 	}
 	.navbar-fixed-top{
 		margin-bottom: 0;
+	}
+	.main_attention{
+		.section_container{
+			section{
+				display: block;
+				div{
+					display: block;
+				}
+				img{
+					margin: 0 auto;
+					padding: 30px 10px;
+					display: block;
+				}
+				p{
+					font-size: 160%;
+					line-height: 120%;
+					width: 85%;
+					padding: 30px 10px;
+				}
+			}
+		}
 	}
 }
 
