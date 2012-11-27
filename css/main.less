@@ -44,12 +44,20 @@
 /* ==========================================================================
    HEADINGS
    ========================================================================== */
-.article_heading{
+h1{
 	font-family: 'benderregular';
 	padding: 40px 2%;
 	margin: 0;
 	text-align: center;
 	line-height: 50px;
+}
+
+h2{
+	font-family: 'benderregular';
+	padding: 0 2%;
+	margin: 0;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(162, 153, 153, .9);
 }
 
 .striped_container h1.article_heading{
@@ -157,6 +165,34 @@ header{
 		margin-bottom: 0;
 	}
 }
+
+/* ==========================================================================
+   MAIN ACTIONS SECTIONS
+   ========================================================================== */
+.main_actions{
+	section{
+		background: url('../img/section_panel_bg.png');
+		.border_radius(10px);
+		border: 1px solid #dddbdb;
+		padding: 1.5%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		img.action_icon{
+			display: block;
+			margin: 15px auto;
+		}
+		h2{
+			margin: 15px;
+		}
+		p{
+			font-size: 120%;
+			line-height: 140%;
+			margin: 20px;
+		}
+	}
+}
+
+
 
 /* ==========================================================================
    RESPONSIVE
