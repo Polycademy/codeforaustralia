@@ -15,55 +15,110 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body>
+    <body data-offset="0" data-target="#main_nav" data-spy="scroll">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-		<header class="navbar navbar-fixed-top center_nav">
-			<div class="navbar-inner">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<nav class="nav-collapse collapse">
-					<ul class="nav">
-						<li><a href="#">Home</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="#">What is Code for Australia?</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="#">Get involved!</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="#">Code for Australia Difference</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="#">Examples</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="#">About</a></li>
-						<li class="divider-vertical"></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="container">
-				<a href="#">
-					<img class="logo" src="#" />
-				</a>
-			</div>
+		<header>
+			<nav class="navbar navbar-fixed-top center_nav" id="main_nav">
+				<div class="navbar-inner">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<div class="nav-collapse collapse container">
+						<ul class="nav">
+							<li><a href="#home">Home</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="#what_is">What is Code for Australia?</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="#get_involved">Get involved!</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="#difference">Code for Australia Difference</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="#examples">Examples</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="#about">About</a></li>
+							<li class="divider-vertical"></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</header>
 		
-		<div class="container">
-			<article class="main_attention">
-				<p>BLAH BLAH BLAH</p>
-			</article>
-			<article class="main_actions">
-			</article>
-			<article class="main_difference">
-			</article>
-			<article class="main_examples">
-			</article>
+		<div class="logo_container" id="home">
+			<a href="/" class="logo">
+				<img src="img/cfa_logo.png" />
+			</a>
 		</div>
 		
-		<footer>
+		<div class="striped_container">
 			<div class="container">
+				<article class="main_attention" id="what_is">
+					<h1>In the digital era, open government is a cornerstone of Australian democracy.</h1>
+					<section>
+						<img src="img/share.png" />
+						<h4>Code for Australia seeks to leverage the power of web technologies, open data, data visualisation and open source governance to address civic issues, community problems and develop digital infrastructure.</h4>
+					</section>
+					<section>
+						<img src="img/ballot.png" />
+						<h4>We believe digital technologies can improve civic transparency, efficiency, participation and education.</h4>
+					</section>
+				</article>
+				<article class="main_actions" id="get_involved">
+					<h1>Interested in joining the movement?</h1>
+					<h1>Here's how we can get started:</h1>
+					<section>
+						<h2>Code for Australia</h2>
+						<p>Blah</p>
+					</section>
+					<section>
+						<h2>Make Stuff Happen</h2>
+						<p>Blah</p>
+					</section>
+					<section>
+						<h2>Publish Open Data</h2>
+						<p>Blah</p>
+					</section>
+					<section>
+						<h2>Partnership</h2>
+						<p>Blah</p>
+					</section>
+				</article>
+			</div>
+		</div>
+		
+		<div class="white_container">
+			<div class="container">
+				<article class="main_difference" id="difference">
+					<h1>What's the difference between Code for Australia and Code for America/Europe?</h1>
+				</article>
+			</div>
+		</div>
+		
+		<div class="grey_container">
+				<div class="container">
+				<article class="main_examples" id="examples">
+					<h1>Here are some examples of what we could do with Code for Australia:</h1>
+				</article>
+			</div>
+		</div>
+		
+		<footer id="about">
+			<div class="container">
+				<article class="main_about">
+					<h1>This is a program from</h1>
+					<h1>Follow us on Twitter and Facebook to keep up!</h1>
+					<h2>Code for Australia was inspired by Code for America, we can't let the Americans have all the fun!</h2>
+					<section class="attributions">
+						<h3>Attributions:</h3>
+						<ul>
+							<li>Share designed by P.J. Onori from The Noun Project</li>
+							<li>Ballot Box designed by Kon Issara from The Noun Project</li>
+						</ul>
+					</section>
+				</article>
 			</div>
 		</footer>
 
