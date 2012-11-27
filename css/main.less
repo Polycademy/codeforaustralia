@@ -1,5 +1,4 @@
 @import url("bootstrap.less");
-@import url("bootstrap-responsive.less");
 
 /*
  * Code for Australia CSS
@@ -33,13 +32,57 @@
 }
 
 /* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+body {
+	padding-top: 60px;
+}
+
+.center_nav{
+	.nav{
+		text-align: center;
+		float: none;
+		>li{
+			float: none;
+			display: inline-block;
+			*display:inline; /* ie7 fix */
+			*zoom:1; /* hasLayout ie7 trigger */
+			vertical-align: top;
+		}
+	}
+	.btn-navbar {
+		width: 18px;
+		height: 13px;
+		margin: 5px auto;
+		float: none;
+		clear: both;
+	}
+}
+
+
+
+/* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+@import url("bootstrap-responsive.less");
+
 /* Large desktop */
 /* @media (min-width: 1200px) {} */
 
 /* Portrait tablet to landscape and desktop */
 /* @media (min-width: 768px) and (max-width: 979px) {} */
+
+@media (max-width: 988px) {
+	.center_nav{
+		.nav{
+			text-align: left;
+			>li{
+				display: block;
+			}
+		}
+	}
+}
+
 
 @media (max-width: 970px) {}
 
