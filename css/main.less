@@ -6,6 +6,17 @@
  * Designed and built with all the love in the world by ROGER!.
  */
  
+ /* ==========================================================================
+   MIXINS & GLOBAL VARIABLES
+   ========================================================================== */
+@container_padding: 1.2%;
+
+.border_radius(@radius){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
 /* ==========================================================================
    FONTS
    ========================================================================== */
@@ -30,40 +41,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-/* ==========================================================================
-   VARIABLES
-   ========================================================================== */
-@container_padding: 1.2%;
-.border_radius(@radius){
-	-webkit-border-radius: @radius;
-	-moz-border-radius: @radius;
-	border-radius: @radius;
-}
-
-/* ==========================================================================
-   HEADINGS
-   ========================================================================== */
-h1{
-	font-family: 'benderregular';
-	padding: 40px 2%;
-	margin: 0;
-	text-align: center;
-	line-height: 50px;
-}
-
-h2{
-	font-family: 'benderregular';
-	padding: 0 2%;
-	margin: 0;
-	text-align: center;
-	text-shadow: 0 1px 1px rgba(162, 153, 153, .9);
-}
-
-.striped_container h1.article_heading{
-	color: #f4f8fe;
-	text-shadow: 0 1px 1px rgba(169, 178, 190, .9);
-}
    
 /* ==========================================================================
    CONTAINERS
@@ -82,7 +59,66 @@ body {
 
 .striped_container{
 	border-top: 1px solid #dddbdb;
+	border-bottom: 1px solid #c9cdd2;
 	background: url('../img/striped_background.png');
+}
+
+.white_container{
+	border-top: 1px solid #e4e7eb;
+	border-bottom: 1px solid #e7e5e5;
+}
+
+.grey_container{
+	border-top: 1px solid #dddbdb;
+	background: #d8d8d8;
+}
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+h1{
+	font-family: 'benderregular';
+	padding: 40px 2%;
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+}
+
+h2{
+	font-family: 'benderregular';
+	padding: 0 2%;
+	margin: 0;
+}
+
+h3{
+	font-family: 'code_pro_demoregular';
+	padding: 0;
+	margin: 0;
+}
+
+.striped_container h1.article_heading{
+	color: #f4f8fe;
+	text-shadow: 0 1px 1px rgba(169, 178, 190, .9);
+}
+
+.white_container h1.article_heading{
+	color: #4e3b3b;
+	text-shadow: 0 1px 1px rgba(167, 157, 157, .9);
+}
+
+.grey_container h1.article_heading{
+	color: #4e3b3b;
+	text-shadow: 0 1px 1px rgba(181, 177, 177, .9);
+}
+
+.main_actions h2.action_heading{
+	text-shadow: 0 1px 1px rgba(162, 153, 153, .9);
+	text-align: center;
+}
+
+.main_examples h3.example_heading{
+	text-shadow: 0 1px 1px rgba(147, 138, 138, .9);
+	text-align: center;
 }
 
 /* ==========================================================================
@@ -169,6 +205,8 @@ header{
 /* ==========================================================================
    MAIN ACTIONS SECTIONS
    ========================================================================== */
+@action_container_spacing: 80px;
+
 .main_actions{
 	.action_number{
 		margin-top: -15px;
@@ -179,17 +217,19 @@ header{
 		text-shadow: 2px 2px 2px rgba(53, 57, 62, 0.7);
 		float: left;
 	}
+	.row-fluid{
+		margin-top: @action_container_spacing - 20px;
+		margin-bottom: @action_container_spacing;
+	}
 	.action_container{
 		background: url('../img/section_panel_bg.png');
 		.border_radius(10px);
 		border: 1px solid #dddbdb;
-		margin-bottom: 50px;
-		margin-top: 50px;
 		section{
 			padding: 1.5%;
 			img.action_icon{
 				display: block;
-				margin: 15px auto;
+				margin: 20px auto;
 			}
 			.action_heading{
 				margin: 15px;
@@ -197,6 +237,7 @@ header{
 			}
 			p, ul, ol{
 				font-size: 120%;
+				line-height: 140%;
 				margin: 20px;
 			}
 			ul, ol{
@@ -210,7 +251,34 @@ header{
 	}
 }
 
+/* ==========================================================================
+   MAIN DIFFERENCE
+   ========================================================================== */
+.main_difference{
+	padding-bottom: 40px;
+	.difference_container{
+		border-left: 1px dotted #dddbdb;
+		border-right: 1px dotted #dddbdb;
+		width: 80%;
+		max-width: 700px;
+		margin: 0 auto;
+		p{
+			font-size: 120%;
+			line-height: 140%;
+			margin: 15px auto;
+			padding: 0 15px;
+		}
+	}
+}
 
+/* ==========================================================================
+   MAIN EXAMPLES
+   ========================================================================== */
+.main_examples{
+	.example_heading{
+		font-size: 220%;
+	}
+}
 
 /* ==========================================================================
    RESPONSIVE
@@ -222,6 +290,10 @@ header{
 	.main_actions{
 		.action_number{
 			font-size: 100px;
+		}
+		.row-fluid{
+			margin-bottom: @action_container_spacing - 10px;
+			margin-top: @action_container_spacing - 30px;
 		}
 	}
 }
@@ -272,6 +344,10 @@ header{
 		.action_number{
 			font-size: 70px;
 		}
+		.row-fluid{
+			margin-bottom: @action_container_spacing - 20px;
+			margin-top: @action_container_spacing - 40px;
+		}
 	}
 }
 
@@ -283,6 +359,13 @@ header{
 		.action_number{
 			font-size: 140px;
 		}
+		.row-fluid{
+			margin-bottom: @action_container_spacing;
+			margin-top: @action_container_spacing - 20px;
+		}
+		.first_action_container{
+			margin-bottom: @action_container_spacing;
+		}
 	}
 }
 
@@ -291,6 +374,13 @@ header{
 	.main_actions{
 		.action_number{
 			font-size: 70px;
+		}
+		.row-fluid{
+			margin-bottom: @action_container_spacing - 20px;
+			margin-top: @action_container_spacing - 40px;
+		}
+		.first_action_container{
+			margin-bottom: @action_container_spacing - 20px;
 		}
 	}
 }
