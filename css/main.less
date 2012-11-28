@@ -170,29 +170,41 @@ header{
    MAIN ACTIONS SECTIONS
    ========================================================================== */
 .main_actions{
-	section{
+	.action_number{
+		margin-top: -15px;
+		font-size: 140px;
+		color: #2e3a4c;
+		font-family: impact, sans-serif;
+		margin-left: 1%;
+		text-shadow: 2px 2px 2px rgba(53, 57, 62, 0.7);
+		float: left;
+	}
+	.action_container{
 		background: url('../img/section_panel_bg.png');
 		.border_radius(10px);
 		border: 1px solid #dddbdb;
-		padding: 1.5%;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		img.action_icon{
-			display: block;
-			margin: 15px auto;
-		}
-		h2{
-			margin: 15px;
-		}
-		p, ul, ol{
-			font-size: 120%;
-			margin: 20px;
-		}
-		ul, ol{
-			margin-left: 40px;
-			li{
-				line-height: 140%;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		section{
+			padding: 1.5%;
+			img.action_icon{
+				display: block;
+				margin: 15px auto;
+			}
+			.action_heading{
+				margin: 15px;
+				padding: 0;
+			}
+			p, ul, ol{
+				font-size: 120%;
 				margin: 20px;
+			}
+			ul, ol{
+				margin-left: 40px;
+				li{
+					line-height: 140%;
+					margin: 20px;
+				}
 			}
 		}
 	}
@@ -206,7 +218,13 @@ header{
 @import url("bootstrap-responsive.less");
 
 /* Large desktop */
-/* @media (min-width: 1200px) {} */
+@media (max-width: 1200px) {
+	.main_actions{
+		.action_number{
+			font-size: 100px;
+		}
+	}
+}
 
 /* Portrait tablet to landscape and desktop */
 /* @media (min-width: 768px) and (max-width: 979px) {} */
@@ -250,17 +268,29 @@ header{
 			}
 		}
 	}
+	.main_actions{
+		.action_number{
+			font-size: 70px;
+		}
+	}
 }
-
-
-@media (max-width: 970px) {}
 
 @media (max-width: 822px) {}
 
-@media (max-width: 767px){}
-
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px){}
+@media (max-width: 767px){
+	.main_actions{
+		.action_number{
+			font-size: 140px;
+		}
+	}
+}
 
 /* Landscape phones and down */
-@media (max-width: 512px) {}
+@media (max-width: 512px) {
+	.main_actions{
+		.action_number{
+			font-size: 70px;
+		}
+	}
+}
